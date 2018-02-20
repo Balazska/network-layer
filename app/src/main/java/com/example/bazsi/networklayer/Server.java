@@ -94,7 +94,7 @@ public class Server {
                         // block the call until connection is created and return
                         // Socket object
                         Socket socket = serverSocket.accept();
-                        socketList.add(new Socket(socket.getInetAddress(),socket.getPort()+1));
+                        //socketList.add(new Socket(socket.getInetAddress(),socket.getPort()+1));
 
                         //read data from client
                         ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
@@ -174,7 +174,7 @@ public class Server {
                         TextView msg = context.findViewById(R.id.msg);
                         msg.setText(message);
 
-                        sendBroadcastMessage("broadcast");
+                        //sendBroadcastMessage("broadcast");
                     }
                 });
             }

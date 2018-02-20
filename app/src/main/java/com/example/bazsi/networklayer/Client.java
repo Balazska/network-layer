@@ -60,13 +60,14 @@ public class Client extends AsyncTask<Void, Void, Void> {
 			 */
             response = inputStream.readObject().toString();
             String[] addressPort = response.split(";");
-            socket.close();
+            /*socket.close();
             int localPort = socket.getLocalPort();
             socket = null;
             clientServer = new ServerSocket();
             clientServer.setReuseAddress(true);
             clientServer.bind(new InetSocketAddress(localPort+1));
             new SocketServerThread().run();
+            */
         } catch (UnknownHostException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
